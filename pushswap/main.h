@@ -1,0 +1,61 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kryutaro <kryutaro@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 15:41:41 by kryutaro          #+#    #+#             */
+/*   Updated: 2025/05/15 17:26:20 by kryutaro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef MAIN_H
+# define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+typedef struct
+{
+	int		num;
+	int		che;
+
+}			t_number;
+
+typedef struct 
+{
+	int *a;
+	int a_size;
+	int *b;
+	int b_size;
+	int count;
+}			t_box;
+
+// typedef struct
+// {
+// 	int *num;
+// 	int *rank;
+// }			t_rank;
+ 
+int			*sorthelp(int pibotnum, int pibot, int *numslot, int l);
+int			*makenumslot(int c, char **cslot);
+int			*change(int *numslot, int l, int s, int i);
+int			*sort(int *numslot, int l, int s);
+t_number	ft_atoi(char *c);
+int samenumcheck(int *numslot,int l);
+int *makerank(int *numslot,int *numslotrank,int l);
+t_box sa(t_box result);
+t_box sb(t_box result);
+t_box ss(t_box result);
+t_box	pa(t_box result);
+t_box	pb(t_box result);
+t_box ra(t_box result);
+t_box rb(t_box result);
+t_box rra(t_box result);
+t_box	rrb(t_box result);
+t_box	rr(t_box result);
+t_box	rrr(t_box result);
+
+#endif
