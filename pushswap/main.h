@@ -31,6 +31,12 @@ typedef struct
 	int *b;
 	int b_size;
 	int count;
+	int remain;
+	int *sizedata_a;
+	int *sizedata_b;
+	int sizedata_alen;
+	int sizedata_blen;
+	int ahead;
 }			t_box;
 
 // typedef struct
@@ -57,5 +63,24 @@ t_box rra(t_box result);
 t_box	rrb(t_box result);
 t_box	rr(t_box result);
 t_box	rrr(t_box result);
+int *makeinit(int *longest,int size,int p);
+int *copypush(int *resulti,int *resultj,int size,int pushnum);
+int *lis(int *numbox,int size);
+int *revlis(int *numbox,int size);
+int revsizelis(int *numbox,int size);
+int sizelis(int *numbox,int size);
+t_box atob(t_box result);
+t_box btoa(t_box result);
+t_box pushswap(t_box result);
+t_box pushdata(t_box result,int lissize,int swich);
+int *quicksort(int *numslot, int left, int right);
+int *rrsize(int *sizedata_a,int sizedata_alen);
+int *sizedeltop(int *sizedata_a,int sizedata_alen);
+int *lisZ(int *numbox,int size);
+int longestcheck(int *result,int size);
+t_box makelong(t_box result,int move);
+int rlongestcheck(int *result,int size);
+t_box pushswap2(t_box result);
+
 
 #endif
